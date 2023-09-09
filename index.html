@@ -4,9 +4,158 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>BASE 404 | Activity 3</title>
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+            * {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+                font-family: "Poppins", sans-serif;
+                scroll-behavior: smooth;
+            }
+            header {
+                height: 100vh;
+                width: 100%;
+                background-image: url(images/nasa-Q1p7bh3SHj8-unsplash.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+            header nav {
+                display: flex;
+                padding: 50px;
+                justify-content: center;
+            }
+            ul li {
+                display: inline-block;
+                text-align: center;
+                font-size: 18px;
+            }
+            a {
+                color: grey;
+                text-decoration: none;
+                margin: 0 10px;
+            }
+            a:hover {
+                color: white;
+                transition: all ease 0.3s;
+            }
+            header h1 {
+                font-weight: bold;
+                font-size: 50px;
+                color: rgb(221, 221, 221);
+                text-align: center;
+                margin-top: 80px;
+            }
+            .highlight {
+                font-size: 6rem;
+                color: white;
+            }
+            .tagline {
+                color: rgb(201, 201, 201);
+                text-align: center;
+                display: block;
+            }
+            .btn {
+                border-radius: 35px;
+                padding: 10px 40px;
+                color: white;
+                outline: none;
+                border: none;
+                display: block;
+                margin: 50px auto;
+                font-size: 1.5rem;
+                background: #000;
+                font-weight: bold;
+            }
+            h2 {
+                font-size: 4rem;
+                text-align: center;
+                color: white;
+                font-weight: bold;
+            }
+            .about {
+                padding: 5% 0;
+                background: linear-gradient(
+                    to right,
+                    rgb(91, 91, 255),
+                    rgb(201, 201, 201)
+                );
+            }
+            .contact {
+                padding: 5% 0;
+                background: linear-gradient(
+                    to right,
+                    rgb(100, 19, 100),
+                    rgb(83, 83, 250)
+                );
+            }
+            hr {
+                margin: 0 100px;
+            }
+            .frame {
+                display: block;
+                margin: 0 auto;
+            }
+            .form {
+                width: 50%;
+                margin: 0 auto;
+                margin-top: 20px;
+            }
+            .form legend {
+                text-align: center;
+                font-size: 1.5rem;
+                padding: 100px auto;
+                color: white;
+            }
+            fieldset div {
+                display: flex;
+                justify-content: center;
+            }
+            .form input {
+                padding: 3px 5px;
+            }
+            .form input,
+            .form textarea {
+                background: hsla(0, 0%, 100%, 0.5);
+                border: none;
+                outline: none;
+                font-size: 18px;
+                margin: 10px 0;
+                width: 50%;
+                border-radius: 35px;
+                padding: 20px;
+            }
+            .form .submit {
+                background: hsla(300, 83%, 37%, 0.5);
+                border-radius: 35px;
+                padding: 10px 40px;
+                color: white;
+                outline: none;
+                border: none;
+                display: block;
+                margin: 10px auto;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+            .form .submit:hover {
+                background: hsla(300, 98%, 22%, 0.5);
+                transition: all ease 0.3s;
+            }
+            footer {
+                text-align: center;
+                padding: 3%;
+                background: linear-gradient(
+                    to right,
+                    rgb(100, 19, 100),
+                    rgb(83, 83, 250)
+                );
+                color: white;
+            }
+        </style>
     </head>
     <body>
-        <header>
+        <header id="home">
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
@@ -14,27 +163,24 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <h1>BASE 404<br /><span>Bootcamp</span></h1>
+            <h1>BASE 404<br /><span class="highlight">Bootcamp</span></h1>
             <br />
-            <span
+            <span class="tagline"
                 ><em
                     >"An in-depth exploration beyond Web Development."</em
                 ></span
             >
-            <button>Explore</button>
+            <button type="button" class="btn">Explore</button>
         </header>
         <!-- main -->
         <main>
-            <!-- Home Section -->
-            <section>
-                <h2>Home</h2>
-            </section>
-            <!-- End of home section -->
             <!-- About -->
-            <section>
+            <section id="about" class="about">
                 <h2>About Base 404</h2>
+                <hr />
                 <br />
                 <iframe
+                    class="frame"
                     width="560"
                     height="315"
                     src="https://www.youtube.com/embed/Yx9GY5BuPgU?si=OlMClo-CZc7D34Mz"
@@ -45,6 +191,7 @@
                 ></iframe>
                 <br />
                 <iframe
+                    class="frame"
                     width="560"
                     height="315"
                     src="https://www.youtube.com/embed/U5oXgt7u6pI?si=W_jWvVqmTTcltTjl"
@@ -55,6 +202,7 @@
                 ></iframe>
                 <br />
                 <iframe
+                    class="frame"
                     width="560"
                     height="315"
                     src="https://www.youtube.com/embed/2KYtUtsC-EI?si=kX-n8HGZbmEIOZM-"
@@ -66,52 +214,47 @@
             </section>
             <!-- End of about section -->
             <!-- Contact -->
-            <section>
+            <section id="contact" class="contact">
                 <h2>Contact</h2>
-                <div class="section">
-                    <h2>Contact</h2>
-                    <form action="" method="post">
-                        <fieldset>
-                            <legend>
-                                <h3>Let's work together!</h3>
-                            </legend>
-                            <div>
-                                <label for="name">Name</label>
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    placeholder="Enter your name"
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <label for="email">Email</label>
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="email"
-                                    placeholder="Enter your email"
-                                    required
-                                />
-                            </div>
-                            <div>
-                                <textarea
-                                    name="message"
-                                    id="message"
-                                    placeholder="Leave us a message..."
-                                    cols="30"
-                                    rows="10"
-                                ></textarea>
-                            </div>
-                            <button type="submit">Submit</button>
-                        </fieldset>
-                    </form>
-                </div>
+                <form action="" method="post" class="form">
+                    <fieldset>
+                        <legend>
+                            <h3>Let's work together!</h3>
+                        </legend>
+                        <div>
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Enter your name"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <input
+                                type="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <textarea
+                                name="message"
+                                id="message"
+                                placeholder="Leave us a message..."
+                                cols="30"
+                                rows="10"
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="submit">Submit</button>
+                    </fieldset>
+                </form>
             </section>
             <!-- End of contact -->
         </main>
         <!-- End of main -->
-        <footer></footer>
+        <footer>
+            <p>Copyright &copy; 2023. All Rights Reserved.</p>
+        </footer>
     </body>
 </html>
